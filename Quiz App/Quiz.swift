@@ -11,6 +11,7 @@ import UIKit
 
 class Quiz {
     //MARK: Properties 
+    // We keep 3 variables on each quiz
     var title: String
     var status: String
     var quiz_pic: UIImage?

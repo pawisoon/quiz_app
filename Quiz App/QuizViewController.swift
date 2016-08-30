@@ -22,10 +22,6 @@ class QuizViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         if let quiz = quiz {
             navigation_quiz_title.title = quiz.title
-//
-//            nameTextField.text   = meal.name
-//            photoImageView.image = meal.photo
-//            ratingControl.rating = meal.rating
         }
         navigation_quiz_title.title = quiz?.title
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,12 +29,11 @@ class QuizViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: Navigation
     
-    // This method lets you configure a view controller before it's presented.
+    // configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
            print("saving seque")
@@ -46,8 +41,8 @@ class QuizViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         }
     }
 
+    //go back to quiz list and cancel current one
     @IBAction func cancel(sender: UIBarButtonItem) {
-        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
         let isPresentingInAddReceiptMode = presentingViewController is UINavigationController
         
         
